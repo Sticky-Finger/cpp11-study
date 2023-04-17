@@ -13,7 +13,7 @@ class String {
   public:
     String(const char * s);
     String();
-    String(const char &);
+    String(const String &);
     ~String();
     int length () const { return len; }
     // overloaded operator methods
@@ -25,8 +25,8 @@ class String {
     friend bool operator<(const String &st, const String &st2);
     friend bool operator>(const String &st1, const String &st2);
     friend bool operator==(const String &st, const String &st2);
-    friend bool operator<<(ostream & os, const String &st);
-    friend bool operator>>(istream & is, String &st);
+    friend ostream & operator<<(ostream & os, const String &st);
+    friend istream & operator>>(istream & is, String &st);
     // static function
     static int HowMany();
 };

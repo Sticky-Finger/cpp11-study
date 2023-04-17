@@ -22,7 +22,7 @@ int main() {
     if (!cin || temp[0] == '\0')
       break;
     else
-      saying[i] = temp;
+      sayings[i] = temp;
   }
   int total = i;
 

@@ -3,3 +3,4 @@
 # */*.dSYM/*
 *.*.out
 *.out
+.vscode

@@ -14,7 +14,7 @@ class Brass {
     virtual void Withdraw(double amt);
     double Balance() const;
     virtual void ViewAcct() const;
-    virtual ~Brass();
+    virtual ~Brass() {}
 };
 
 class BrassPlus : public Brass {

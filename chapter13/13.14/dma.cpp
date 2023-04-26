@@ -41,8 +41,8 @@ LacksDMA::LacksDMA(const char * c, const char * l, int r) : BaseDMA(l, r) {
   color[39] = '\0';
 }
 
-LacksDMA::LacksDMA(const char * c, BaseDMA & rs) : BaseDMA(rs) {
-  strcpy(color, c, COL_LEN - 1);
+LacksDMA::LacksDMA(const char * c, const BaseDMA & rs) : BaseDMA(rs) {
+  strncpy(color, c, COL_LEN - 1);
   color[COL_LEN - 1] = '\0';
 }
 
@@ -63,7 +63,7 @@ HasDMA::HasDMA(const char * s, const BaseDMA & rs) : BaseDMA(rs) {
   strcpy(style, s);
 }
 
-HasDMA::HasDMA(HasDMA & hs) : HasDMA(hs) {
+HasDMA::HasDMA(const HasDMA & hs) : BaseDMA(hs) {
   style = new char[strlen(hs.style) + 1];
   strcpy(style, hs.style);
 }
